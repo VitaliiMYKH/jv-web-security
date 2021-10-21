@@ -1,6 +1,7 @@
 package mate.controller.driver;
 
 import java.io.IOException;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,12 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/views/login/login.jsp").forward(req,resp);
+
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
     }
 
     @Override
